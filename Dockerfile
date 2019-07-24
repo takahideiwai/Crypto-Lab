@@ -4,7 +4,8 @@ FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
 MAINTAINER Takahide Iwai "tiwai@purdue.edu"
 
 #add John the ripper and gedit 
-RUN apt-get update && apt-get -y install gedit gcc vim libssl-dev
+RUN apt-get update && apt-get -y install gedit gcc vim libssl-dev \
+apache2
 #create a non-root user
 RUN useradd -d /home/user -m -s /bin/bash user
 
@@ -24,6 +25,11 @@ RUN mkdir /home/user/demoCA/crl
 RUN mkdir /home/user/demoCA/newcerts
 RUN touch /home/user/demoCA/serial
 RUN echo '1000' >> /home/user/demoCA/serial
+
+
+#File needed for HTTPS configuration
+RUN mkdir /var/www/crypto
+COPY index.html /var/www/crypto
 
 #Allow user to run certain commands without a password
 ADD usersudo /etc/sudoers.d/
