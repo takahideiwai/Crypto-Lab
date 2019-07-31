@@ -1,1 +1,6 @@
 user ALL=(root) NOPASSWD: /usr/bin/vim /etc/hosts
+user ALL=(root) NOPASSWD: /usr/bin/vim /etc/apache2/sites-available/default-ssl.conf
+user ALL=(root) NOPASSWD: /usr/sbin/apachectl configtest
+user ALL=(root) NOPASSWD: /usr/sbin/a2enmod ssl
+user ALL=(root) NOPASSWD: /usr/sbin/a2ensite default-ssl
+user ALL=(root) NOPASSWD: /usr/sbin/service
