@@ -3,12 +3,12 @@
 This lab was created in order for the students to understand how PKI works. The students will understand the core functions of PKI such as protecting the web, and defeating Man in the Middle attack. Furthermore, students will understand the root of the trust in PKI and the problems that arise when the root CA (Certificate Authority) is compromised. 
 ### Target Audience
 **Instructors**  
-If you are an instructor teaching cybersecurity concepts, this lab can be used to provide hands-on experience on implementing a root CA, understanding some of the OpenSSL commands to produce Public/Private key pairs, creating a certificate signing requence, signing a certificate, and so on. 
+If you are an instructor teaching cybersecurity concepts, this lab can be used to provide hands-on experience on implementing a root CA, understanding some of the OpenSSL commands to produce Public/Private key pairs, creating a certificate signing request, signing a certificate, and so on. 
   
 **Students**  
-If you are a student studying cybersecurity concepts, it is essential for you to understand how PKI works since it is a widely used technique when browing websites using HTTPS. Students will implement a root CA using OpenSSL, sign a certificate, deploy certificate using Apache-Based HTTPS website, and conduct a man in the middle attack using a compromised root CA. 
+If you are a student studying cybersecurity concepts, it is essential for you to understand how PKI works since it is a widely used technique when browsing websites using HTTPS. Students will implement a root CA using OpenSSL, sign a certificate, deploy certificate using Apache-Based HTTPS website, and conduct a man in the middle attack using a compromised root CA. 
 ### Design and Architecture  
-This lab can be completed by using one VNC container. The container comes with all the necessary tools such as *vim* text editor, *openssl* libraries, *Apache webserver*, and *firefox* webbrowser. Students will edit the */etc/hosts* file to host a Apache webserver in it's own container. 
+This lab can be completed by using one VNC container. The container comes with all the necessary tools such as *vim* text editor, *openssl* libraries, *Apache webserver*, and *firefox* webbrowser. Students will edit the */etc/hosts* file to host an Apache webserver in it's own container. 
 
 ### Installation and Usage
 In order to build the image, type in the following commands in the terminal.  
